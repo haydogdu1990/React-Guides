@@ -10,18 +10,18 @@ https://react.dev/learn/start-a-new-react-project
 
 #### context/ThemeContext.jsx
 ```sh
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect } from 'react';
 
 export const ThemeContext = createContext();
 
 const Provider = ({ children }) => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState('light');
 
   useEffect(() => {
     //Runs on the first render (İlk işlemde çalışır)
     //And any time any dependency value changes (ve belirtilen değerler değiştiğinde çalışır)
 
-    localStorage.setItem("theme", theme);
+    localStorage.setItem('theme', theme);
   }, [theme]);
 
   const data = {
@@ -32,17 +32,17 @@ const Provider = ({ children }) => {
 };
 
 export default Provider;
+
 ```
 
 #### index.js
 ```sh
-import { useContext } from "react";
-
+import React, { useContext } from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
 
-import ThemeProvider from "./context/ThemeContext";
+import ThemeProvider from './context/ThemeContext';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -55,15 +55,20 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
 #### App.jsx
 ```sh
-import { useContext } from "react";
-import { ThemeContext } from "./context/ThemeContext";
+import { useContext } from 'react';
+import { ThemeContext } from './context/ThemeContext';
 
 function App() {
-  const {theme, setTheme} = useContext(ThemeContext);
+  const { theme, setTheme } = useContext(ThemeContext);
+
   return (
     <div className="App">
-     {theme} 
-     <Button onClick={(e) => theme==dark ? setTheme("light") : setTheme("dark")}>Text</Button>
+      {theme}
+      <button
+        onClick={() => (theme == 'dark' ? setTheme('light') : setTheme('dark'))}
+      >
+        Text
+      </button>
     </div>
   );
 }
