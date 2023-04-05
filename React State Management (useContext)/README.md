@@ -10,7 +10,7 @@ https://react.dev/learn/start-a-new-react-project
 
 #### context/ThemeContext.jsx
 ```sh
-import { createContext, useState, useEffect } from 'react';
+import { createContext, useState } from 'react';
 
 export const ThemeContext = createContext();
 
