@@ -1,3 +1,3 @@
 # React-Guides
 
-## Contains the most basic use cases of React tools
+### Contains the most basic use cases of React tools
