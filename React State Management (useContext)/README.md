@@ -61,7 +61,7 @@ import { ThemeContext } from "./context/ThemeContext";
 function App() {
   const {theme, setTheme} = useContext(ThemeContext);
   return (
-    <div>
+    <div className="App">
      {theme} 
      <Button onClick={(e) => theme==dark ? setTheme("light") : setTheme("dark")}>Text</Button>
     </div>
