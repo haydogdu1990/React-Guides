@@ -16,14 +16,7 @@ export const ThemeContext = createContext();
 
 const Provider = ({ children }) => {
   const [theme, setTheme] = useState('light');
-
-  useEffect(() => {
-    //Runs on the first render (İlk işlemde çalışır)
-    //And any time any dependency value changes (ve belirtilen değerler değiştiğinde çalışır)
-
-    localStorage.setItem('theme', theme);
-  }, [theme]);
-
+  
   const data = {
     theme,
     setTheme,
