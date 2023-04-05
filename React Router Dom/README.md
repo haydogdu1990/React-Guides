@@ -28,48 +28,99 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
 #### App.jsx
 ```sh
-import { useState, useContext } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './App.css';
 
-import { Routes, Route, Link, NavLink } from "react-router-dom";
+import { Routes, Route } from 'react-router-dom';
 
-import HomePage from "./pages/HomePage";
-import ProductCategory from "./pages/ProductCategory";
-import ProductDetail from "./pages/ProductDetail";
+import HomePage from './pages/HomePage';
+import Products from './pages/Products';
+import ProductDetail from './pages/ProductDetail';
 
-import Navbar from "./components/Navbar";
-import Menu from "./components/Menu";
-import Layout from "./components/Layout";
-import Footer from "./components/Footer";
+import Layout from './components/Layout';
+import Menu from './components/Menu';
 
 function App() {
-  
   return (
     <div>
-      <Navbar />
       <Menu />
-
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/products" element={<Layout />}>
-          <Route index={true} element={<ProductCategory />} />
+          <Route index={true} element={<Products />} />
           <Route path=":id" element={<ProductDetail />} />
         </Route>
       </Routes>
-
-      <Footer />
     </div>
   );
 }
 
 export default App;
-);
 ```
-#### NavLink
+
+
+#### pages/HomePage.jsx
 ```sh
-import { NavLink } from "react-router-dom";
+const HomePage = () => {
+  return <div>Home Page</div>;
+};
+
+export default HomePage;
+```
+
+#### useParams
+
+<Route path=":id" element={<ProductDetail />} />
+
+It is used to get the id value from the URL
+
+#### pages/ProductDetail.jsx
+```sh
+import { useParams } from 'react-router-dom';
+
+const ProductDetail = () => {
+  const { id } = useParams();
+  return <div>Product Detail {id}</div>;
+};
+
+export default ProductDetail;
+```
+
+#### pages/Products.jsx
+```sh
+const Products = () => {
+  return <div>Products</div>;
+};
+
+export default Products;
+```
+
+
+#### Outlet
+#### components/Layout.jsx
+```sh
+import { Outlet } from 'react-router-dom';
+
+const Layout = () => {
+  return (
+    <div>
+      <div>
+        <div>Layout content</div>
+
+        <div>
+          <Outlet />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Layout;
+```
+
+#### NavLink
+#### components/Menu.jsx
+```sh
+import { NavLink } from 'react-router-dom';
 
 const Menu = () => {
   return (
@@ -82,6 +133,9 @@ const Menu = () => {
           <li>
             <NavLink to="/products">Products</NavLink>
           </li>
+          <li>
+            <NavLink to="/products/123">Products id 123</NavLink>
+          </li>
         </ul>
       </div>
     </div>
@@ -89,26 +143,4 @@ const Menu = () => {
 };
 
 export default Menu;
-```
-
-#### useParams
-/products/:id
-
-<Route path=":id" element={<ProductDetail />} />
-
-It is used to get the id value from the URL
-
-```sh
-import { useParams } from "react-router-dom";
-
-const ProductDetail = () => {
-  const { id } = useParams();
-  return (
-    <div>
-      {id}
-    </div>
-  );
-};
-
-export default ProductDetail;
 ```
