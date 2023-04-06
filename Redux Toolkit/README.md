@@ -9,7 +9,7 @@ npm install @reduxjs/toolkit
 npm i react-redux
 ```
 #### app/store.js
-```sh
+```javascript
 import { configureStore } from '@reduxjs/toolkit';
 import counterReducer from './counter/counterSlice';
 
@@ -20,7 +20,7 @@ export const store = configureStore({
 });
 ```
 #### index.js
-```sh
+```javascript
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
@@ -39,7 +39,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 ```
 
 #### app/counter/counterSlice.js
-```sh
+```javascript
 import { createSlice } from '@reduxjs/toolkit';
 
 export const counterSlice = createSlice({
@@ -65,7 +65,7 @@ export default counterSlice.reducer;
 );
 ```
 #### components/Counter.jsx
-```sh
+```javascript
 import { useState } from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
