@@ -29,6 +29,7 @@
 
 - ### API Calls
     + #### REST
+        - ❌ 🌟 Axios 
         - ❌ 🌟 TanStack Query (React Query)
     + #### GraphQL
         - ❌ 🌟 Apollo
