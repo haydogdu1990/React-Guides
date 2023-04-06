@@ -9,7 +9,7 @@ https://react.dev/learn/start-a-new-react-project
 ```
 
 #### context/ThemeContext.jsx
-```sh
+```javascript
 import { createContext, useState } from 'react';
 
 export const ThemeContext = createContext();
@@ -29,7 +29,7 @@ export default Provider;
 ```
 
 #### index.js
-```sh
+```javascript
 import React, { useContext } from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
@@ -47,7 +47,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 ```
 
 #### App.jsx
-```sh
+```javascript
 import { useContext } from 'react';
 import { ThemeContext } from './context/ThemeContext';
 
