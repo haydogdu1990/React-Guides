@@ -9,7 +9,7 @@ npm npm i react-router-dom
 ```
 
 #### index.js
-```sh
+```javascript
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
@@ -27,7 +27,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 ```
 
 #### App.jsx
-```sh
+```javascript
 import './App.css';
 
 import { Routes, Route } from 'react-router-dom';
@@ -59,7 +59,7 @@ export default App;
 
 
 #### pages/HomePage.jsx
-```sh
+```javascript
 const HomePage = () => {
   return <div>Home Page</div>;
 };
@@ -74,7 +74,7 @@ export default HomePage;
 It is used to get the id value from the URL
 
 #### pages/ProductDetail.jsx
-```sh
+```javascript
 import { useParams } from 'react-router-dom';
 
 const ProductDetail = () => {
@@ -86,7 +86,7 @@ export default ProductDetail;
 ```
 
 #### pages/Products.jsx
-```sh
+```javascript
 const Products = () => {
   return <div>Products</div>;
 };
@@ -97,7 +97,7 @@ export default Products;
 
 #### Outlet
 #### components/Layout.jsx
-```sh
+```javascript
 import { Outlet } from 'react-router-dom';
 
 const Layout = () => {
@@ -119,7 +119,7 @@ export default Layout;
 
 #### NavLink
 #### components/Menu.jsx
-```sh
+```javascript
 import { NavLink } from 'react-router-dom';
 
 const Menu = () => {
