@@ -75,4 +75,4 @@
     + #### Final form [🔗](https://final-form.org/react)
 
 - ### Mobile
-    + #### 🌟 React Native [🔗](https://reactnative.dev/docs/getting-started)
+    + #### React Native [🔗](https://reactnative.dev/docs/getting-started)
