@@ -8,7 +8,7 @@ https://react.dev/learn/start-a-new-react-project
 npm install @reduxjs/toolkit
 npm i react-redux
 ```
-#### app/store.js
+#### app/store.jsx
 ```javascript
 import { configureStore } from '@reduxjs/toolkit';
 import counterReducer from './counter/counterSlice';
