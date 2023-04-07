@@ -19,7 +19,7 @@ export const store = configureStore({
   },
 });
 ```
-#### index.js
+#### index.jsx
 ```javascript
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -38,7 +38,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 );
 ```
 
-#### app/counter/counterSlice.js
+#### app/counter/counterSlice.jsx
 ```javascript
 import { createSlice } from '@reduxjs/toolkit';
 
