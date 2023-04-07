@@ -28,7 +28,7 @@ export default Provider;
 
 ```
 
-#### index.js
+#### index.jsx
 ```javascript
 import React, { useContext } from 'react';
 import ReactDOM from 'react-dom/client';
