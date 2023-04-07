@@ -8,7 +8,7 @@ https://react.dev/learn/start-a-new-react-project
 npm npm i react-router-dom
 ```
 
-#### index.js
+#### index.jsx
 ```javascript
 import React from 'react';
 import ReactDOM from 'react-dom/client';
