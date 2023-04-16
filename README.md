@@ -2,7 +2,7 @@
 
 - ### [React Developer Roadmap](https://github.com/haydogdu1990/React-Guides/tree/main/React%20Developer%20Roadmap)
 
-### Contains the most basic use cases of React tools
+### This project contains simple applications created to guide the use of React tools.
 
 - ### CLI Tools
      - ❌ 🌟 Vite 
