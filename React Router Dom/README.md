@@ -5,7 +5,7 @@ https://react.dev/learn/start-a-new-react-project
 
 #### npm packages to install
 ```sh
-npm npm i react-router-dom
+npm i react-router-dom
 ```
 
 #### index.jsx
