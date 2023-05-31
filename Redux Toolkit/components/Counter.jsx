@@ -5,7 +5,7 @@ import {
   increment,
   decrement,
   incrementByAmount,
-} from '../redux/counter/counterSlice';
+} from '../app/counter/counterSlice';
 
 function Counter() {
   const [amount, setAmount] = useState(3);
