@@ -5,7 +5,7 @@ https://react.dev/learn/start-a-new-react-project
 
 #### npm packages to install
 ```sh
-npm install @reduxjs/toolkit
+npm i @reduxjs/toolkit
 npm i react-redux
 ```
 #### app/store.jsx
